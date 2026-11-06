@@ -33,6 +33,11 @@ Repo: `github.com/RadoSantar/Nuzlocke-Tracker`, Branch `claude/magical-cray-d6vv
 - **`CLAUDE.md`** — dieses Projektgedächtnis (Schlankheitsregel s.o.).
 - **`README.md`** — Wiederherstellungs-Anleitung für eingefrorene Checkpoints (`git show`-Befehle
   je Checkpoint) + kurzer Netlify-/PWA-Setup-Überblick.
+- **`BACKLOG.md`** — die EINZIGE Backlog-Quelle (Rechercheaudit, UX/QoL, Karten-
+  Kalibrierungsstand je Region, Todesursache-Ideen), gegliedert mit Quellenverweisen. Erledigte
+  Punkte werden durchgestrichen mit Version markiert, nicht gelöscht. **Bei jedem Commit
+  mitpflegen** (siehe Workflow-Pflichtschritte unten) — `CLAUDE.md` selbst führt keine eigene
+  Backlog-Liste mehr, um Dopplung/Drift zwischen zwei Quellen zu vermeiden.
 - **`docs/archiv/CLAUDE-historie-bis-v1.9.96.md`** — vollständiger, unveränderter Volltext der
   bisherigen `CLAUDE.md`-Fassungen; jede einzelne Änderungsrunde mit voller Begründung/Lehre.
   Künftige große Rechercheaudit-Berichte oder weitere Archiv-Abschnitte kommen ebenfalls unter
@@ -152,25 +157,10 @@ Repo: `github.com/RadoSantar/Nuzlocke-Tracker`, Branch `claude/magical-cray-d6vv
 
 ## Offener Backlog
 
-**Rechercheaudit:**
-- Alola (Sonne/Mond/USUM), Galar (Schwert/Schild): komplette Neu-Recherche nötig (frühere
-  Detailberichte verloren), inkl. Reihenfolge-Verifikation. Stilvorlage: `audit_reports/gen5.md`.
-- Einall (Schwarz2/Weiß2): komplettes Postgame (West-Einall-Rückkehr, ~15 Standorte) fehlt.
-- Reihenfolge-Verifikation: Sinnoh und Einall noch offen (Methode: Bulbapedia "Connecting areas"
-  pro Einzelseite prüfen, siehe `audit_reports/order-gen1-3.md`).
-- Johto, ungeklärt: mögliche Namensverwechslung "Anemonia City"/"Oliviana City"
-  (Cianwood/Olivine) — erst klären, dann Boss `chuck`s `bossAfter`-Bindung korrigieren, nicht
-  umgekehrt. Details: Archiv, Ursprung `order-gen1-3.md` Abschnitt 4.3.
-
-**UX/QoL (Ideen, keine Priorisierung):**
-- Onboarding-Tour erst kuratieren, wenn v2.0 ("das große Ganze") steht — bewusst zurückgestellt.
-- Barrierefreiheit: `aria-label`-Abdeckung lückenhaft; eigene Schriftgrößen-Einstellung denkbar.
-- Performance: Shimmer/Skeleton statt reinem "?"-Platzhalter beim ersten Sprite-Laden.
-- Auffindbarkeit: "Neu"-Badge auf Einstellungs-Kapiteln mit kürzlichem Update.
-- Datensicherheit: rollierendes lokales Backup der letzten Speicherstände, unabhängig von
-  Cloud-Sync.
-- Auswertung: Nemesis-Pokémon-Statistik (technisch via `deathBossId` bereits vorbereitet),
-  teilbare Bild-Karte des Run-Rückblicks.
+Vollständig in **`BACKLOG.md`** (Repo-Root) — gegliedert nach Rechercheaudit-Backlog,
+UX-/QoL-Backlog, Karten-Kalibrierungsstand je Region und Todesursache-Ideen, jeweils mit
+Quellenverweis. Dort auch nachsehen, bevor ein neuer Task zu einem dieser Themen formuliert
+wird (Dopplungen vermeiden).
 
 ## Workflow-Pflichtschritte vor jedem Commit
 
@@ -184,6 +174,8 @@ Repo: `github.com/RadoSantar/Nuzlocke-Tracker`, Branch `claude/magical-cray-d6vv
    "Versionsstände"-Stat-Kachel und Footer-Versionsnummer mitziehen.
 5. `CLAUDE.md` pflegen: neue dauerhafte Regeln/Lehren knapp ergänzen (Schlankheitsregel!); bei
    Korrektur eines früheren Fehlers neuen Eintrag ergänzen, nichts umschreiben.
+5b. `BACKLOG.md` pflegen: neu entstandene offene Punkte ergänzen, erledigte Punkte
+   DURCHSTREICHEN mit Version (nicht löschen), Quellenverweis aktuell halten.
 6. Vor jedem Artifact-Publish: `node tools/make-artifact-bare.js`, dann die gestrippte Ausgabe
    publizieren.
 7. Für die PWA: `node tools/build-netlify-zip.js`, ZIP komplett auf `app.netlify.com/drop`
