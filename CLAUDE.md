@@ -38,6 +38,10 @@ Repo: `github.com/RadoSantar/Nuzlocke-Tracker`, Branch `claude/magical-cray-d6vv
   Punkte werden durchgestrichen mit Version markiert, nicht gelöscht. **Bei jedem Commit
   mitpflegen** (siehe Workflow-Pflichtschritte unten) — `CLAUDE.md` selbst führt keine eigene
   Backlog-Liste mehr, um Dopplung/Drift zwischen zwei Quellen zu vermeiden.
+- **`TASKS.md`** — Übergabe-Datei vom Projektleiter-Chat (plant/formuliert) an diesen
+  Programmierer-Chat (setzt um). Projektleiter hat KEIN Schreibrecht — der Nutzer trägt Tasks
+  ein. Zu Sitzungsbeginn bzw. auf Nutzerhinweis prüfen, offene Einträge abarbeiten, erledigte
+  nach "Erledigte Tasks" verschieben (mit Version), nicht löschen.
 - **`docs/archiv/CLAUDE-historie-bis-v1.9.96.md`** — vollständiger, unveränderter Volltext der
   bisherigen `CLAUDE.md`-Fassungen; jede einzelne Änderungsrunde mit voller Begründung/Lehre.
   Künftige große Rechercheaudit-Berichte oder weitere Archiv-Abschnitte kommen ebenfalls unter
@@ -176,6 +180,8 @@ wird (Dopplungen vermeiden).
    Korrektur eines früheren Fehlers neuen Eintrag ergänzen, nichts umschreiben.
 5b. `BACKLOG.md` pflegen: neu entstandene offene Punkte ergänzen, erledigte Punkte
    DURCHSTREICHEN mit Version (nicht löschen), Quellenverweis aktuell halten.
+5c. `TASKS.md` prüfen (zu Sitzungsbeginn bzw. auf Nutzerhinweis): offene Einträge abarbeiten,
+   erledigte nach "Erledigte Tasks" verschieben (mit Version), nicht löschen.
 6. Vor jedem Artifact-Publish: `node tools/make-artifact-bare.js`, dann die gestrippte Ausgabe
    publizieren.
 7. Für die PWA: `node tools/build-netlify-zip.js`, ZIP komplett auf `app.netlify.com/drop`
