@@ -41,11 +41,14 @@ Repo: `github.com/RadoSantar/Nuzlocke-Tracker`, Branch `claude/magical-cray-d6vv
 - **`TASKS.md`** — Übergabe-Datei vom Projektleiter-Chat (plant/formuliert) an diesen
   Programmierer-Chat (setzt um). **Seit 2026-11-06 hat der Projektleiter per fein-granularem
   GitHub-Token (nur dieses Repo, nur "Contents") Schreibrecht und trägt Tasks SELBST ein** —
-  ausschließlich in `TASKS.md`, nie in Code/`CLAUDE.md`/`BACKLOG.md`/`audit_reports/`.
-  Projektleiter-Commits sind klein, Präfix `TASKS:`. Zu Sitzungsbeginn immer `git pull` (neue
+  Standardmäßig nur in `TASKS.md`; Doku-Dateien (`CLAUDE.md`, `BACKLOG.md`, `IDEEN.md`,
+  `audit_reports/INDEX.md`) nur, wenn der Nutzer ihm einen Task ausdrücklich direkt zuweist; App-Code,
+  Daten und `tools/` nie. Projektleiter-Commits sind klein, Präfix `TASKS:` bzw. `DOKU:`. Zu Sitzungsbeginn immer `git pull` (neue
   Einträge können jederzeit von dort kommen, sonst drohen Push-Konflikte wie am 2026-11-06
   erlebt), dann offene Einträge abarbeiten, erledigte nach "Erledigte Tasks" verschieben (mit
   Version, abgehakt), nicht löschen.
+- **`IDEEN.md`** — Ideen-Sammlung des Innovator-Subagents (siehe "Subagent-Rollen"). Wird NICHT
+  direkt umgesetzt: der Projektleiter legt die Ideen dem Nutzer vor, nur genehmigte werden zu Tasks.
 - **`docs/archiv/CLAUDE-historie-bis-v1.9.96.md`** — vollständiger, unveränderter Volltext der
   bisherigen `CLAUDE.md`-Fassungen; jede einzelne Änderungsrunde mit voller Begründung/Lehre.
   Künftige große Rechercheaudit-Berichte oder weitere Archiv-Abschnitte kommen ebenfalls unter
@@ -76,6 +79,32 @@ Repo: `github.com/RadoSantar/Nuzlocke-Tracker`, Branch `claude/magical-cray-d6vv
 - **`tools/build-netlify-zip.js`** — baut das Netlify-ZIP korrekt flach (nie manuell `zip -r`
   bauen) und patcht `sw.js`s `CACHE_NAME` automatisch auf die aktuelle `APP_VERSION`.
 - **`.gitignore`** — schließt nur das generierte Netlify-ZIP aus.
+
+## Subagent-Rollen (abgestimmt mit Nutzer + Projektleiter, 2026-11-06)
+
+Grundregel: **nur die Hauptsitzung (Orchestrator) committet** — Ausnahme: ein Audit-Bericht wird
+sofort nach Rückgabe des Rechercheurs committet. Prüfende Rollen melden nur, sie reparieren nichts.
+
+- **Orchestrator** (Hauptsitzung): `git pull`, `TASKS.md` lesen, Code-/Datenänderungen selbst
+  umsetzen, Teilaufgaben an die Rollen unten delegieren, committen.
+- **Rechercheur:** Rechercheaudits nach Muster `audit_reports/gen5.md`/`gen6.md`. Existenz- und
+  Reihenfolge-Prüfung getrennt, Asset-URLs per `curl` prüfen. Ändert keinen App-Code.
+- **Übersetzer:** prüft, ob englische Begriffe mit dem OFFIZIELLEN deutschen Namen übersetzt sind
+  statt wörtlich (z. B. "Rock Climb" = Kraxler) — Pokémon, Attacken/VMs, Items, Orte, Trainer, Orden,
+  UI-Texte; Quelle PokéWiki/offizielle deutsche Spieltexte. Prüft jeden neuen Audit-Bericht vor der
+  Umsetzung. Meldet Funde, ändert nichts.
+- **Verifizierer:** `validate-editions.js`, `node --check`, Playwright auf den TATSÄCHLICHEN
+  Zielzustand, Shapely-Überlappungscheck bei Kalibrierungsdaten. Meldet bestanden/nicht bestanden
+  mit Befund, repariert nichts.
+- **UI-Polish:** CSS, Hell/Dunkel, Editionsfarben, Antipp-Größen. Keine Logik/Daten; Ergebnis geht
+  immer an den Verifizierer.
+- **Aufräumer:** toter Code, verwaiste Handler, Dopplungen — ohne Verhaltensänderung; Ergebnis geht
+  immer an den Verifizierer.
+- **Release & Doku:** Versionsbump, `CHANGELOG_HTML`, `CLAUDE.md` (inkl. 40k-Grenze),
+  `BACKLOG.md`, `TASKS.md`, Artifact- und Netlify-Build. Fasst keinen Code an.
+- **Innovator:** bringt neue Ideen ein (Features, QoL, bessere Technologien, neue Werkzeuge,
+  Sonstiges) und schreibt sie AUSSCHLIESSLICH in `IDEEN.md` (Format dort). Setzt nie selbst um —
+  der Projektleiter legt sie dem Nutzer vor und erstellt nur mit dessen Genehmigung Tasks.
 
 ## Kern-Datenmodellregeln (`nuzlocke-v2-editionen.html`)
 

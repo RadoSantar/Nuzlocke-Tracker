@@ -22,6 +22,20 @@ bereits neu recherchiert).
   eigene `cls:"Vorstand"`-Bosskarten rein (z.B. Alola: Faba/Plumeria), nicht nur der Teamboss
   selbst.
   Quelle: Archiv Zeile 1420-1423, 1427-1431.
+- [ ] **Schwert/Schild-DLC (Isle of Armor, Crown Tundra):** ausdrückliches v2.0-Kriterium laut
+  `CLAUDE.md` → "Projektzweck". Prüfen, ob/wie weit die DLC-Gebiete in der App überhaupt
+  vorhanden sind, und im Zuge des Galar-Audits (Punkt direkt darüber, Task T6) mit recherchieren.
+  Quelle: `CLAUDE.md` Projektzweck; Archiv Zeile 15.
+- [ ] **Sinnoh-Exklusivstandorte prüfen:** beim Karten-Rollout (v1.9.94) nur aus dem bestehenden
+  Code übernommen, nie recherchiert — sind "Zerrwelt"/"Eisenruinen" wirklich Platin-exklusiv und
+  "Untergrundhöhlen"/"Hamanasu-Park" wirklich BDSP-exklusiv, oder fehlt einer Edition ein Standort,
+  den sie eigentlich auch haben müsste? Sinnvoll zusammen mit der Reihenfolge-Verifikation Sinnoh
+  (Punkt weiter unten).
+  Quelle: Archiv Zeile 796-810.
+- [ ] **Karmesin/Purpur (Gen 9) inkl. DLC (Die türkisgrüne Maske, Die Indigoblaue Scheibe):**
+  Status unbekannt — weder Audit-Bericht noch bisheriger Backlog-Punkt. Zählt zum v2.0-Kriterium
+  "alle Editionen vollständig"; Rechercheaudit nötig (Hauptspiel + DLC, Existenz und Reihenfolge).
+  Quelle: Abgleich Projektleiter 2026-11-06 (T4); siehe `audit_reports/INDEX.md` "Fehlende Berichte".
 - [ ] **Einall (Schwarz2/Weiß2) — komplettes Postgame:** Rückkehr nach West-Einall (~15
   Standorte: Avenitia/Route 1-3/Gavina/Orion City/Septerna City/Wunderbrücke/P2-Labor/
   Route 17-18/Schwarzes Hochhaus-Weiße Baumhöhle) fehlt komplett.

@@ -32,6 +32,8 @@ verifiziert). Köpfe wurden entsprechend korrigiert.
   verloren, bevor sie je committet wurden — nur eine Kurzfassung überlebte im Changelog. `gen6.md`
   (Kalos) war vom selben Verlust betroffen, wurde aber bereits komplett neu recherchiert (siehe
   oben). Siehe `BACKLOG.md` Abschnitt 1 für den offenen Punkt.
+- **Karmesin/Purpur (Gen 9) inkl. DLC**: noch nie auditiert, kein Bericht vorhanden. Zählt zum
+  v2.0-Kriterium "alle Editionen vollständig" — siehe `BACKLOG.md` Abschnitt 1.
 - Kein eigener Bericht existiert für die Gen-1-3/Gen-4-Vollaudits (Standorte/Bosse/Level, nicht nur
   Reihenfolge oder Sprites) — deren Funde wurden direkt umgesetzt (u.a. v1.9.35 für Sinnoh), ohne
   dass ein Detailbericht im Repo abgelegt wurde. Da bereits umgesetzt, kein offener Handlungsbedarf,
