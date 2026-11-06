@@ -192,3 +192,18 @@ am Ende blieben unsichtbar.
 nennt noch die ALTEN Abschnittsnamen aus `CLAUDE.md` (vor der Verschlankung). Beim nächsten
 Einrichten/Aktualisieren des Projektleiter-Chats die Anweisung entsprechend nachziehen — auf
 `BACKLOG.md`/`TASKS.md` verweisen statt auf die inzwischen umbenannten `CLAUDE.md`-Abschnitte.
+
+## Nachtrag (direkt im Anschluss, selber Tag)
+
+Unmittelbar nach dem Schreiben dieser Archiv-Datei kam beim Push ein Konflikt: der Nutzer (bzw.
+der Projektleiter-Chat) hatte zwischenzeitlich direkt `TASKS.md` committet und gepusht
+("TASKS: Schreibzugriff Projektleiter dokumentiert, T3 eingetragen", Commit `c6799dc`). Inhalt:
+der Projektleiter-Chat hat seit diesem Tag per fein-granularem GitHub-Token (Scope: nur dieses
+Repo, nur "Contents") tatsächlich SCHREIBRECHT — allerdings bewusst eng begrenzt auf `TASKS.md`
+allein, nicht auf Code/`CLAUDE.md`/`BACKLOG.md`. Das widerspricht der oben in Abschnitt 3
+dokumentierten Annahme ("Projektleiter hat KEIN Schreibrecht") — diese Annahme war zum Zeitpunkt
+der ursprünglichen Konversation korrekt, wurde aber offenbar danach vom Nutzer selbst bewusst
+geändert (vermutlich genau als Lösung für das Übergabe-Problem, das `TASKS.md` lösen sollte).
+`CLAUDE.md`s `TASKS.md`-Beschreibung wurde entsprechend aktualisiert (aktueller Stand gilt immer
+`CLAUDE.md`, nicht diesem Archiv-Eintrag). Commits von dort kommen künftig mit `TASKS:`-Präfix,
+Programmierer sollte deshalb zu Sitzungsbeginn immer `git pull` machen, bevor er pusht.

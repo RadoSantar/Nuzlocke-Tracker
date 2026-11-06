@@ -39,9 +39,13 @@ Repo: `github.com/RadoSantar/Nuzlocke-Tracker`, Branch `claude/magical-cray-d6vv
   mitpflegen** (siehe Workflow-Pflichtschritte unten) — `CLAUDE.md` selbst führt keine eigene
   Backlog-Liste mehr, um Dopplung/Drift zwischen zwei Quellen zu vermeiden.
 - **`TASKS.md`** — Übergabe-Datei vom Projektleiter-Chat (plant/formuliert) an diesen
-  Programmierer-Chat (setzt um). Projektleiter hat KEIN Schreibrecht — der Nutzer trägt Tasks
-  ein. Zu Sitzungsbeginn bzw. auf Nutzerhinweis prüfen, offene Einträge abarbeiten, erledigte
-  nach "Erledigte Tasks" verschieben (mit Version), nicht löschen.
+  Programmierer-Chat (setzt um). **Seit 2026-11-06 hat der Projektleiter per fein-granularem
+  GitHub-Token (nur dieses Repo, nur "Contents") Schreibrecht und trägt Tasks SELBST ein** —
+  ausschließlich in `TASKS.md`, nie in Code/`CLAUDE.md`/`BACKLOG.md`/`audit_reports/`.
+  Projektleiter-Commits sind klein, Präfix `TASKS:`. Zu Sitzungsbeginn immer `git pull` (neue
+  Einträge können jederzeit von dort kommen, sonst drohen Push-Konflikte wie am 2026-11-06
+  erlebt), dann offene Einträge abarbeiten, erledigte nach "Erledigte Tasks" verschieben (mit
+  Version, abgehakt), nicht löschen.
 - **`docs/archiv/CLAUDE-historie-bis-v1.9.96.md`** — vollständiger, unveränderter Volltext der
   bisherigen `CLAUDE.md`-Fassungen; jede einzelne Änderungsrunde mit voller Begründung/Lehre.
   Künftige große Rechercheaudit-Berichte oder weitere Archiv-Abschnitte kommen ebenfalls unter
@@ -180,8 +184,9 @@ wird (Dopplungen vermeiden).
    Korrektur eines früheren Fehlers neuen Eintrag ergänzen, nichts umschreiben.
 5b. `BACKLOG.md` pflegen: neu entstandene offene Punkte ergänzen, erledigte Punkte
    DURCHSTREICHEN mit Version (nicht löschen), Quellenverweis aktuell halten.
-5c. `TASKS.md` prüfen (zu Sitzungsbeginn bzw. auf Nutzerhinweis): offene Einträge abarbeiten,
-   erledigte nach "Erledigte Tasks" verschieben (mit Version), nicht löschen.
+5c. Zu Sitzungsbeginn `git pull` (Projektleiter kann jederzeit neue Tasks direkt eingetragen
+   haben), dann `TASKS.md` prüfen: offene Einträge abarbeiten, erledigte nach "Erledigte Tasks"
+   verschieben (mit Version), nicht löschen.
 6. Vor jedem Artifact-Publish: `node tools/make-artifact-bare.js`, dann die gestrippte Ausgabe
    publizieren.
 7. Für die PWA: `node tools/build-netlify-zip.js`, ZIP komplett auf `app.netlify.com/drop`
