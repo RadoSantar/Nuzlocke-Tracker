@@ -23,7 +23,46 @@
 
 ## Offene Tasks
 
-_(aktuell keine offen)_
+- [ ] **T4 — Drei Lücken in `BACKLOG.md` nachtragen** — Beim Abgleich CLAUDE.md ↔ BACKLOG.md
+  fielen drei fehlende Punkte auf: (1) Das Schwert/Schild-DLC (Isle of Armor, Crown Tundra) ist laut
+  CLAUDE.md "Projektzweck" ausdrückliches v2.0-Kriterium, steht aber nicht als eigener Punkt in
+  BACKLOG.md Abschnitt 1. (2) Die beim Sinnoh-Karten-Rollout (v1.9.94, Archiv) vorgemerkte Prüfung,
+  ob die Exklusivstandorte Zerrwelt/Eisenruinen (Platin) und Untergrundhöhlen/Hamanasu-Park (BDSP)
+  korrekt zugeordnet sind, fehlt. (3) Für Karmesin/Purpur (Gen 9) gibt es weder Audit-Bericht noch
+  Backlog-Punkt; auch dessen DLCs zählen zum v2.0-Kriterium "alle Editionen vollständig" — bitte
+  als offenen Punkt (Status unbekannt, Audit nötig) aufnehmen und in `audit_reports/INDEX.md` unter
+  "Fehlende Berichte" ergänzen. (vorgeschlagen: Projektleiter, 2026-11-06)
+- [ ] **T5 — Subagent-Rollen in CLAUDE.md verankern + `IDEEN.md` anlegen** — Mit dem Nutzer
+  abgestimmte Rollenaufteilung als kurzer Abschnitt "Subagent-Rollen" in CLAUDE.md aufnehmen
+  (Schlankheitsregel beachten). Grundregel: nur die Hauptsitzung committet (Ausnahme: ein
+  Audit-Bericht wird sofort nach Rückgabe committet). Rollen:
+  **Orchestrator** (Hauptsitzung: liest TASKS.md, setzt Code/Daten selbst um, delegiert, committet);
+  **Rechercheur** (Audits nach Muster `gen5.md`/`gen6.md`, Existenz- und Reihenfolge-Prüfung getrennt,
+  Asset-URLs per `curl` prüfen, ändert keinen App-Code);
+  **Übersetzer** (prüft, ob englische Begriffe korrekt mit dem OFFIZIELLEN deutschen Namen übersetzt
+  sind statt 1:1 — z. B. "Rock Climb" = Kraxler; gilt für Pokémon, Attacken/VMs, Items, Orte,
+  Trainer, Orden und UI-Texte; Quelle PokéWiki/offizielle deutsche Spieltexte; prüft auch jeden
+  neuen Audit-Bericht vor der Umsetzung; meldet Funde, ändert selbst nichts);
+  **Verifizierer** (`validate-editions.js`, `node --check`, Playwright auf tatsächlichen
+  Zielzustand, Shapely-Überlappungscheck bei Kalibrierungsdaten; meldet nur, repariert nichts);
+  **UI-Polish** (CSS/Hell-Dunkel/Editionsfarben/Antipp-Größen, keine Logik/Daten, Ergebnis immer
+  zum Verifizierer); **Aufräumer** (toter Code/verwaiste Handler/Dopplungen ohne
+  Verhaltensänderung, Ergebnis immer zum Verifizierer); **Release & Doku** (Versionsbump, Changelog,
+  CLAUDE.md inkl. 40k-Grenze, BACKLOG.md, TASKS.md, Artifact- und Netlify-Build, kein Code);
+  **Innovator** (bringt neue Ideen ein — Features, QoL, bessere Technologien, neue Werkzeuge,
+  Sonstiges — und schreibt sie AUSSCHLIESSLICH in eine neue Datei `IDEEN.md` (Titel, Nutzen,
+  grober Aufwand, Risiken, Bezug zu BACKLOG.md falls vorhanden); setzt nie selbst um. Der
+  Projektleiter liest `IDEEN.md`, legt die Ideen dem Nutzer vor und erstellt NUR mit dessen
+  Genehmigung Tasks daraus). `IDEEN.md` in die Dateiübersicht von CLAUDE.md aufnehmen.
+  (vorgeschlagen: Projektleiter, 2026-11-06)
+- [ ] **T6 — Galar-Rechercheaudit inkl. DLC (Rechercheur + Übersetzer), nach T5** — Erster Schritt
+  Richtung v2.0: Für Schwert/Schild existiert kein Bericht mehr (`gen8.md` verloren, siehe
+  `audit_reports/INDEX.md`), und das DLC ist ausdrückliches v2.0-Kriterium. Der Rechercheur
+  erstellt `audit_reports/gen8.md` nach Muster `gen6.md`: Hauptspiel plus Isle of Armor und Crown
+  Tundra, Existenz- UND Reihenfolge-Prüfung der Standorte, Bosse/Level/Ass, Präzedenzfall
+  Vorstands-Bosskarten (`cls:"Vorstand"`) beachten. Der Übersetzer prüft alle deutschen Namen im
+  Bericht. Bericht sofort committen und dem Nutzer zum Gegenchecken vorlegen — noch KEINE Änderung
+  am App-Code. (vorgeschlagen: Projektleiter, 2026-11-06)
 
 ## Erledigte Tasks
 
