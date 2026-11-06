@@ -1,6 +1,9 @@
 # Rechercheaudit Runde 2 (Wiederholung) — Generation 6: Kalos (X/Y)
 
-Stand: recherchiert, noch **nicht** in `nuzlocke-v2-editionen.html` umgesetzt. Quellen: Bulbapedia
+Stand: umgesetzt in v1.9.39/v1.9.40 (9 Team-Flare-Wissenschaftler-Bosskarten, Flordelis'
+dritter Kampf + Level, fünfter Rivalenkampf + Level-Korrekturen, Connies Ass, Omega-Höhle +
+Route 22). Status korrigiert bei T3 (2026-11-06) — stand zuvor fälschlich als "noch nicht
+umgesetzt". Quellen: Bulbapedia
 (Trainer-Einzelseiten - zuverlässiger als Zusammenfassungen von Serebii/PokéDB per Suche, siehe
 `CLAUDE.md`), PokéWiki (deutsche Namen), Cross-Check gegen `KALOS_LOCATIONS`/`KALOS_BOSSES`/
 `KALOS_BOSS_AFTER` in `nuzlocke-v2-editionen.html`.

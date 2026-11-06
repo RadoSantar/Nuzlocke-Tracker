@@ -1,6 +1,9 @@
 # Rechercheaudit: Standort-REIHENFOLGE — Generation 1-3 (Kanto/Johto/Hoenn)
 
-Stand: recherchiert, noch **nicht** in `nuzlocke-v2-editionen.html` umgesetzt. Geprüft wird laut
+Stand: umgesetzt in v1.9.50 (15 Standort-Reihenfolge-Korrekturen in Kanto, Johto und Hoenn).
+Status korrigiert bei T3 (2026-11-06) — stand zuvor fälschlich als "noch nicht umgesetzt". Bewusst
+NICHT angefasst: Route 115 (Hoenn), Route 47/48 (Johto, Existenz- kein Reihenfolgefehler), Boss
+"chuck" (Zuordnungsfehler) — siehe `BACKLOG.md` Abschnitt 1. Geprüft wird laut
 Auftrag **ausschließlich die Sequenz/Position** der Standorte in den 7 Location-Arrays, die die 10
 Editionen der Generationen 1-3 abdecken — nicht Namen, Level, Bosse oder Vollständigkeit (das haben
 frühere Audits bereits behandelt bzw. ist bekannter Backlog).

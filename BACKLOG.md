@@ -9,9 +9,15 @@ verändert) bzw. auf `audit_reports/*.md`.
 
 ## 1. Rechercheaudit-Backlog
 
-- [ ] **Alola (Sonne/Mond/USUM), Galar (Schwert/Schild):** komplette Neu-Recherche nötig
-  (frühere Detailberichte `gen7.md`/`gen8.md` verloren, nur Kurzfassung im Changelog erhalten),
-  inkl. Reihenfolge-Verifikation. Stilvorlage: `audit_reports/gen5.md`/`gen6.md`. Präzedenzfall
+Übersicht aller vorhandenen Berichte (Generation, Thema, Umsetzungsstatus): `audit_reports/INDEX.md`
+(angelegt T3, 2026-11-06). Dort auch: welche Generationen noch **gar keinen** Bericht in diesem
+Ordner haben (Gen 7/8 — siehe Punkt direkt darunter; Gen 6 war ebenfalls betroffen, wurde aber
+bereits neu recherchiert).
+
+- [ ] **Alola (Sonne/Mond/USUM), Galar (Schwert/Schild):** komplette Neu-Recherche nötig —
+  **kein Bericht in `audit_reports/` vorhanden** (frühere Detailberichte `gen7.md`/`gen8.md`
+  verloren, nur Kurzfassung im Changelog erhalten), inkl. Reihenfolge-Verifikation. Stilvorlage:
+  `audit_reports/gen5.md`/`gen6.md`. Präzedenzfall
   aus dem Kalos-Audit mitnehmen: Vorstands-/Admin-Mitglieder eines Bösewicht-Teams gehören als
   eigene `cls:"Vorstand"`-Bosskarten rein (z.B. Alola: Faba/Plumeria), nicht nur der Teamboss
   selbst.

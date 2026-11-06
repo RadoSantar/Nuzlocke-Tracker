@@ -23,16 +23,16 @@
 
 ## Offene Tasks
 
-- [ ] **T3 — `audit_reports/INDEX.md` anlegen und Status-Köpfe der Berichte korrigieren** —
-  Es gibt bisher keine Übersicht, welcher Bericht in `audit_reports/` welchen Stand hat (aktuell:
-  `gen1-2-sprites.md`, `gen3-sprites.md`, `gen4-sprites.md`, `gen5-sprites.md`, `gen5.md`,
-  `gen6.md`, `order-gen1-3.md`). Bitte eine `INDEX.md` anlegen, die jeden Bericht mit Generation,
-  Thema und Status auflistet (umgesetzt in vX.Y.Z / offen / teilweise), und dabei die Status-Zeilen
-  in den Berichten selbst korrigieren: `gen6.md` meldet z. B. im Kopf noch "noch nicht umgesetzt",
-  obwohl der v1.9.39-Checkpoint laut README genau diese Kalos-Funde enthält. Zusätzlich in
-  `BACKLOG.md` vermerken, welche Generationen noch gar keinen Bericht haben (gen6–8 gingen laut
-  Archiv verloren, gen6 wurde neu recherchiert). (vorgeschlagen: Projektleiter, 2026-11-06)
+_(aktuell keine offen)_
 
 ## Erledigte Tasks
 
-_(noch keine abgeschlossen)_
+- [x] **T3 — `audit_reports/INDEX.md` angelegt und Status-Köpfe korrigiert** (erledigt,
+  2026-11-06, kein App-Code/-Daten betroffen → kein `APP_VERSION`-Bump). `audit_reports/INDEX.md`
+  neu angelegt: listet alle 7 Berichte mit Generation, Thema, Status (per Changelog-Cross-Check
+  gegen `nuzlocke-v2-editionen.html` verifiziert, nicht nur README). Dabei drei fälschlich auf
+  "noch nicht umgesetzt" stehende Status-Köpfe korrigiert (`gen5.md`→v1.9.38, `gen6.md`→
+  v1.9.39/40, `order-gen1-3.md`→v1.9.50 — alle drei waren längst umgesetzt). `BACKLOG.md`
+  Abschnitt 1 verweist jetzt auf die neue `INDEX.md` und nennt explizit, dass Alola/Galar
+  (Gen 7/8) als einzige Generationen noch gar keinen Bericht in `audit_reports/` haben.
+  (vorgeschlagen: Projektleiter, 2026-11-06)

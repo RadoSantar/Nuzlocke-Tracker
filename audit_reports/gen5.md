@@ -1,6 +1,9 @@
 # Rechercheaudit Runde 2 (Wiederholung) — Generation 5: Einall (Schwarz/Weiß, Schwarz2/Weiß2)
 
-Stand: recherchiert für v1.9.38 (Vorschlag), noch **nicht** in `nuzlocke-v2-editionen.html` umgesetzt.
+Stand: umgesetzt in v1.9.38 (6 Funde behoben: Cheren6-Standort, Bucht von Ondula, drei entfernte
+Matisse-Verbündetenkämpfe, zwei ergänzte Matisse-Postgame-Rückkämpfe, Zinzolin3/Strandgrotte, drei
+Schattentrio-Kämpfe vor Ghetsis). Status korrigiert bei T3 (2026-11-06) — stand zuvor fälschlich
+als "noch nicht umgesetzt", siehe `tools/validate-editions.js`-Lauf und Changelog-Eintrag v1.9.38.
 Quellen: Bulbapedia (Trainer-/Orts-Seiten), Serebii.net, PokéWiki (deutsche Namen), Cross-Check
 gegen die aktuellen Datenstrukturen `EINALL_BW_BOSSES`/`EINALL_BW_LOCATIONS` und
 `EINALL_B2W2_BOSSES`/`EINALL_B2W2_LOCATIONS` in `nuzlocke-v2-editionen.html`.
